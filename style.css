@@ -42,16 +42,28 @@ h1 {
     text-align: right;
 }
 
-.buttons {
+button { 
+    height: 40px;
+    width:50px;
+    border-radius: 30px;
+    margin:6px auto;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgb(88, 85, 85);
+    color: white;
+}
+
+#n0, #n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9 {
+    background-color: rgb(110, 153, 104);
+}
+
+#reset, #plus, #minus, #multiply, #divide, #equals {
+background-color: rgb(143, 39, 39);
+}
+
+
+.buttons{
     margin-top: 40px;
     display: flex;
-
-}
-
-.numbers {
-
-}
-
-.operators {
-
+    padding:10px;
 }
