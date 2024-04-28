@@ -29,7 +29,8 @@ function calculate(a, b, operator){
     }
 }
 
-const output = document.querySelector("output");
+const output = document.querySelector(".output");
+
 
 const allButtons = document.querySelectorAll("button");
 
@@ -47,7 +48,7 @@ allButtons.forEach((button)=> {
                    operand += button.id;
                    calculation += button.value;
                    displayString += button.value;
-                   console.log(displayString);
+                   output.textContent = displayString;
                 }
         
 
@@ -57,7 +58,7 @@ allButtons.forEach((button)=> {
             let firstNumber = parseInt(numbers[0]);
             let secondNumber = parseInt(numbers[1]);
             let result = calculate(firstNumber, secondNumber, operand);
-            console.log(`The result is ${result}`);
+            output.textContent = result;
         }
     
         else if(button.id == "reset") {
@@ -65,6 +66,7 @@ allButtons.forEach((button)=> {
             displayString = '';
             operand = '';
             calculation ='';
+            output.textContent = '';
             console.log("Memory cleared!") 
         }
         else {
@@ -74,6 +76,7 @@ allButtons.forEach((button)=> {
                 button.id != "divide"){
                 displayString += button.value;
                 console.log(displayString);
+                output.textContent = displayString;
                 }
         }    
     });
